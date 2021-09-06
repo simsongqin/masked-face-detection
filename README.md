@@ -6,3 +6,6 @@ Training on the trunk CNN network using the CASIA-webface dataset downloaded onl
 
 ## 17/8/2021
 Training the clean and occluded image pairs using the siamese network to generate the mask dictionary.
+
+## 6/9/2021
+Occluded block detection successful acc>99%
