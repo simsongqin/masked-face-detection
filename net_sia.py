@@ -5,19 +5,19 @@ class BlockIR(nn.Module):
     def __init__(self, inplanes, planes, stride, dim_match):
         super(BlockIR, self).__init__()
         
-        self.bn1 = nn.BatchNorm2d(inplanes, track_running_stats=False)#edit #C from input size (N,C,H,W)
+        self.bn1 = nn.BatchNorm2d(inplanes) #C from input size (N,C,H,W)
         self.conv1 = nn.Conv2d(inplanes, planes, kernel_size=3, stride=1, padding=1, bias=False)#(in_channel,out_channel,kernel_size,stride,padding,bias)
-        self.bn2 = nn.BatchNorm2d(planes, track_running_stats=False)#edit
+        self.bn2 = nn.BatchNorm2d(planes)
         self.prelu1 = nn.PReLU(planes)
         self.conv2 = nn.Conv2d(planes, planes, kernel_size=3, stride=stride, padding=1, bias=False)
-        self.bn3 = nn.BatchNorm2d(planes, track_running_stats=False)#edit
+        self.bn3 = nn.BatchNorm2d(planes)#edit
 
         if dim_match:
             self.downsample = None
         else:
             self.downsample = nn.Sequential(
                 nn.Conv2d(inplanes, planes, kernel_size=1, stride=stride, bias=False),
-                nn.BatchNorm2d(planes, track_running_stats=False),#edit
+                nn.BatchNorm2d(planes),
             )
 
     def forward(self, x):
@@ -94,22 +94,51 @@ class LResNet_Sia(nn.Module):
 
     def forward(self, x1, x2):
         x = self.conv1(x1)
+#        print("conv1:")
+#        print(x)
         x = self.bn1(x)
+#        print("bn1:")
+#       	print(x)
         x = self.prelu1(x)
+#        print("prelu1:")
+#       	print(x)
         x = self.layer1(x)
+#        print("layer1:")
+#       	print(x)
         x = self.layer2(x)
+#        print("layer2:")
+#       	print(x)
         x = self.layer3(x)
+#        print("layer3:")
+#       	print(x)
         f1 = self.layer4(x)
-        
+#        print("layer4:")
+#        print(f1)
+                
         x = self.conv1(x2)
+#        print("conv1:")
+#       	print(x)
         x = self.bn1(x)
+#        print("bn1:")
+#       	print(x)
         x = self.prelu1(x)
+#        print("prelu1:")
+#       	print(x)
         x = self.layer1(x)
+#        print("layer1:")
+#       	print(x)
         x = self.layer2(x)
+#        print("layer2:")
+#       	print(x)
         x = self.layer3(x)
+#        print("layer3:")
+#       	print(x)
         f2 = self.layer4(x)
+#        print("f2:")
+#        print(f2) 
+
         # --Begin--Sia branch
-        f_diff = torch.add(f1, -1.0, f2)
+        f_diff = torch.add(input=f1, other=f2, alpha=-1.0)
         f_diff = torch.abs(f_diff)
         out = self.sia(f_diff)
         # --End-- Sia branch
@@ -203,8 +232,4 @@ def LResNet50E_IR(is_gray=False):
     return LResNet(BlockIR, layers, filter_list, is_gray)
 # ---------------------------------- LResNet50E-IR network End ----------------------------------
 
-#net=BlockIR()
-#params = list(net.parameters())
-#print(len(params))
-#
-#print(params[3].size())
+

@@ -1,0 +1,416 @@
+DataParallel(
+  (module): LResNet_Sia(
+    (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (prelu1): PReLU(num_parameters=64)
+    (layer1): Sequential(
+      (0): BlockIR(
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=64)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BlockIR(
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=64)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): BlockIR(
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=64)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer2): Sequential(
+      (0): BlockIR(
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=128)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BlockIR(
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=128)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): BlockIR(
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=128)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): BlockIR(
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=128)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer3): Sequential(
+      (0): BlockIR(
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (5): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (6): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (7): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (8): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (9): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (10): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (11): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (12): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (13): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer4): Sequential(
+      (0): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=512)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BlockIR(
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=512)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): BlockIR(
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=512)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (sia): Sequential(
+      (0): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): PReLU(num_parameters=512)
+      (2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (3): Sigmoid()
+    )
+    (fc): Sequential(
+      (0): BatchNorm1d(21504, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (1): Dropout(p=0, inplace=False)
+      (2): Linear(in_features=21504, out_features=512, bias=True)
+      (3): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+)
+length of train Database: 199302 Batches: 389
+length of valid Database: 253658 Batches: 496
+Number of Identities: 10575
+Params to learn:
+Update 	 module.module.sia.0.weight
+Update 	 module.module.sia.1.weight
+Update 	 module.module.sia.2.weight
+Update 	 module.module.sia.2.bias
+Stay 	 module.module.fc.0.weight
+Stay 	 module.module.fc.0.bias
+Stay 	 module.module.fc.2.weight
+Stay 	 module.module.fc.2.bias
+Stay 	 module.module.fc.3.weight
+Stay 	 module.module.fc.3.bias
+Stay 	 weight
+2021-09-06 19:57:05 Epoch 1 start training
+2021-09-06 19:58:46 Train Epoch: 1 [51200/199302 (26%)]100, SiaLoss: 0.022822, ClsLoss: [21.373061/17.687905/19.758699], Prec: 12.3672, Prec_occ: 26.8516, Elapsed time: 100.9484s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:00:22 Train Epoch: 1 [102400/199302 (51%)]200, SiaLoss: 0.014797, ClsLoss: [17.083323/14.376376/11.996948], Prec: 36.0215, Prec_occ: 57.8926, Elapsed time: 95.8229s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:01:59 Train Epoch: 1 [153600/199302 (77%)]300, SiaLoss: 0.012195, ClsLoss: [15.296928/12.914722/10.927667], Prec: 49.1348, Prec_occ: 70.3848, Elapsed time: 97.0311s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:03:23 Train Summary : SiaLoss: 0.011038, ClsLoss: [14.335774/12.108059], Prec: 56.4815, Prec_occ: 76.5043, Elapsed time: 378.4198s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 20:05:04 Valid : [51200/253658 (20%)], SiaLoss: 0.007240, CleanLoss: 10.866348, OccLoss: 9.134619, Prec: 83.1602, Prec_occ: 97.5137, Elapsed time: 98.9101s(100 iters)
+2021-09-06 20:06:38 Valid : [102400/253658 (40%)], SiaLoss: 0.007234, CleanLoss: 10.868077, OccLoss: 9.137787, Prec: 83.2568, Prec_occ: 97.5166, Elapsed time: 94.3006s(100 iters)
+2021-09-06 20:08:14 Valid : [153600/253658 (60%)], SiaLoss: 0.007236, CleanLoss: 10.868516, OccLoss: 9.136803, Prec: 83.2083, Prec_occ: 97.5430, Elapsed time: 96.4942s(100 iters)
+2021-09-06 20:09:48 Valid : [204800/253658 (81%)], SiaLoss: 0.007233, CleanLoss: 10.862162, OccLoss: 9.133959, Prec: 83.2832, Prec_occ: 97.5410, Elapsed time: 93.5875s(100 iters)
+2021-09-06 20:11:19 Valid Summary : SiaLoss: 0.007233, CleanLoss: 10.860053, OccLoss: 9.134329, Prec: 83.2881, Prec_occ: 97.5376, Elapsed time: 474.6141s
+2021-09-06 20:11:19 Epoch 2 start training
+2021-09-06 20:13:01 Train Epoch: 2 [51200/199302 (26%)]489, SiaLoss: 0.007171, ClsLoss: [10.604758/8.957530/9.852850], Prec: 85.3125, Prec_occ: 97.8984, Elapsed time: 101.5339s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:14:42 Train Epoch: 2 [102400/199302 (51%)]589, SiaLoss: 0.007180, ClsLoss: [10.403836/8.798357/9.492952], Prec: 86.7598, Prec_occ: 98.1934, Elapsed time: 100.8386s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:16:22 Train Epoch: 2 [153600/199302 (77%)]689, SiaLoss: 0.007183, ClsLoss: [10.228138/8.665165/9.209647], Prec: 88.0482, Prec_occ: 98.3757, Elapsed time: 100.6477s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:17:50 Train Summary : SiaLoss: 0.007183, ClsLoss: [10.083381/8.556880], Prec: 89.0153, Prec_occ: 98.5264, Elapsed time: 391.1549s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 20:19:29 Valid : [51200/253658 (20%)], SiaLoss: 0.007180, CleanLoss: 9.480281, OccLoss: 8.107814, Prec: 92.9434, Prec_occ: 99.1035, Elapsed time: 96.5550s(100 iters)
+2021-09-06 20:21:01 Valid : [102400/253658 (40%)], SiaLoss: 0.007175, CleanLoss: 9.483106, OccLoss: 8.109950, Prec: 92.9941, Prec_occ: 99.0771, Elapsed time: 92.1541s(100 iters)
+2021-09-06 20:22:36 Valid : [153600/253658 (60%)], SiaLoss: 0.007177, CleanLoss: 9.481903, OccLoss: 8.108510, Prec: 92.9479, Prec_occ: 99.1068, Elapsed time: 94.9384s(100 iters)
+2021-09-06 20:24:06 Valid : [204800/253658 (81%)], SiaLoss: 0.007175, CleanLoss: 9.476993, OccLoss: 8.105452, Prec: 93.0015, Prec_occ: 99.1016, Elapsed time: 90.4474s(100 iters)
+2021-09-06 20:25:33 Valid Summary : SiaLoss: 0.007174, CleanLoss: 9.475335, OccLoss: 8.106487, Prec: 93.0209, Prec_occ: 99.0909, Elapsed time: 460.7117s
+2021-09-06 20:25:33 Epoch 3 start training
+2021-09-06 20:27:10 Train Epoch: 3 [51200/199302 (26%)]878, SiaLoss: 0.007126, ClsLoss: [9.316289/8.013729/8.736267], Prec: 94.0215, Prec_occ: 99.1719, Elapsed time: 96.7799s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:28:44 Train Epoch: 3 [102400/199302 (51%)]978, SiaLoss: 0.007082, ClsLoss: [9.164527/7.912513/8.482412], Prec: 94.7256, Prec_occ: 99.2705, Elapsed time: 94.6872s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:30:19 Train Epoch: 3 [153600/199302 (77%)]1078, SiaLoss: 0.007060, ClsLoss: [9.034362/7.822645/8.278629], Prec: 95.3086, Prec_occ: 99.3392, Elapsed time: 95.0034s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:31:46 Train Summary : SiaLoss: 0.007042, ClsLoss: [8.938418/7.752274], Prec: 95.6494, Prec_occ: 99.3960, Elapsed time: 373.3819s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 20:33:42 Valid : [51200/253658 (20%)], SiaLoss: 0.006952, CleanLoss: 8.513319, OccLoss: 7.461615, Prec: 97.2324, Prec_occ: 99.5664, Elapsed time: 113.7207s(100 iters)
+2021-09-06 20:35:39 Valid : [102400/253658 (40%)], SiaLoss: 0.006947, CleanLoss: 8.517908, OccLoss: 7.464048, Prec: 97.2314, Prec_occ: 99.5840, Elapsed time: 117.4239s(100 iters)
+2021-09-06 20:37:38 Valid : [153600/253658 (60%)], SiaLoss: 0.006948, CleanLoss: 8.515381, OccLoss: 7.462262, Prec: 97.2513, Prec_occ: 99.6022, Elapsed time: 119.1024s(100 iters)
+2021-09-06 20:39:37 Valid : [204800/253658 (81%)], SiaLoss: 0.006947, CleanLoss: 8.512069, OccLoss: 7.459218, Prec: 97.2515, Prec_occ: 99.6050, Elapsed time: 119.2566s(100 iters)
+2021-09-06 20:41:30 Valid Summary : SiaLoss: 0.006946, CleanLoss: 8.511010, OccLoss: 7.460414, Prec: 97.2502, Prec_occ: 99.5932, Elapsed time: 582.3326s
+2021-09-06 20:41:30 Epoch 4 start training
+2021-09-06 20:43:29 Train Epoch: 4 [51200/199302 (26%)]1267, SiaLoss: 0.006983, ClsLoss: [8.411489/7.371012/7.961076], Prec: 97.4102, Prec_occ: 99.6230, Elapsed time: 118.6294s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:45:18 Train Epoch: 4 [102400/199302 (51%)]1367, SiaLoss: 0.006982, ClsLoss: [8.329493/7.315039/7.823091], Prec: 97.6172, Prec_occ: 99.6318, Elapsed time: 109.6069s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:47:12 Train Epoch: 4 [153600/199302 (77%)]1467, SiaLoss: 0.006983, ClsLoss: [8.248878/7.261031/7.690194], Prec: 97.7682, Prec_occ: 99.6458, Elapsed time: 113.6757s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 20:48:51 Train Summary : SiaLoss: 0.006982, ClsLoss: [8.187496/7.218514], Prec: 97.8922, Prec_occ: 99.6701, Elapsed time: 440.8438s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 20:50:41 Valid : [51200/253658 (20%)], SiaLoss: 0.006937, CleanLoss: 7.931056, OccLoss: 7.066429, Prec: 98.3906, Prec_occ: 99.7246, Elapsed time: 108.3145s(100 iters)
+2021-09-06 20:52:32 Valid : [102400/253658 (40%)], SiaLoss: 0.006932, CleanLoss: 7.936101, OccLoss: 7.068526, Prec: 98.3984, Prec_occ: 99.7383, Elapsed time: 111.6139s(100 iters)
+2021-09-06 20:54:57 Valid : [153600/253658 (60%)], SiaLoss: 0.006934, CleanLoss: 7.933342, OccLoss: 7.066668, Prec: 98.4238, Prec_occ: 99.7428, Elapsed time: 144.2822s(100 iters)
+2021-09-06 20:56:43 Valid : [204800/253658 (81%)], SiaLoss: 0.006932, CleanLoss: 7.930047, OccLoss: 7.063565, Prec: 98.4131, Prec_occ: 99.7373, Elapsed time: 106.5263s(100 iters)
+2021-09-06 20:58:24 Valid Summary : SiaLoss: 0.006932, CleanLoss: 7.929616, OccLoss: 7.064971, Prec: 98.4049, Prec_occ: 99.7300, Elapsed time: 571.1055s
+2021-09-06 20:58:24 Epoch 5 start training
+2021-09-06 21:00:20 Train Epoch: 5 [51200/199302 (26%)]1656, SiaLoss: 0.006990, ClsLoss: [7.850555/6.983976/7.487161], Prec: 98.5566, Prec_occ: 99.7383, Elapsed time: 116.3741s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 21:02:11 Train Epoch: 5 [102400/199302 (51%)]1756, SiaLoss: 0.006988, ClsLoss: [7.802784/6.954977/7.410368], Prec: 98.5859, Prec_occ: 99.7529, Elapsed time: 111.4481s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 21:03:59 Train Epoch: 5 [153600/199302 (77%)]1856, SiaLoss: 0.006998, ClsLoss: [7.755020/6.922321/7.328417], Prec: 98.6309, Prec_occ: 99.7526, Elapsed time: 108.0420s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 21:05:35 Train Summary : SiaLoss: 0.007004, ClsLoss: [7.714538/6.896645], Prec: 98.6840, Prec_occ: 99.7550, Elapsed time: 431.4802s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 21:07:35 Valid : [51200/253658 (20%)], SiaLoss: 0.006999, CleanLoss: 7.539757, OccLoss: 6.800289, Prec: 98.8672, Prec_occ: 99.7637, Elapsed time: 118.4290s(100 iters)
+2021-09-06 21:09:34 Valid : [102400/253658 (40%)], SiaLoss: 0.006995, CleanLoss: 7.544634, OccLoss: 6.802037, Prec: 98.8652, Prec_occ: 99.7793, Elapsed time: 119.4304s(100 iters)
+2021-09-06 21:11:40 Valid : [153600/253658 (60%)], SiaLoss: 0.006996, CleanLoss: 7.542005, OccLoss: 6.800202, Prec: 98.8802, Prec_occ: 99.7786, Elapsed time: 125.8553s(100 iters)
+2021-09-06 21:13:56 Valid : [204800/253658 (81%)], SiaLoss: 0.006994, CleanLoss: 7.539232, OccLoss: 6.797346, Prec: 98.8784, Prec_occ: 99.7759, Elapsed time: 136.0735s(100 iters)
+2021-09-06 21:16:11 Valid Summary : SiaLoss: 0.006994, CleanLoss: 7.539447, OccLoss: 6.799056, Prec: 98.8701, Prec_occ: 99.7725, Elapsed time: 634.5526s
+2021-09-06 21:16:11 Epoch 6 start training
+2021-09-06 21:18:05 Train Epoch: 6 [51200/199302 (26%)]2045, SiaLoss: 0.007022, ClsLoss: [7.465339/6.729564/7.167668], Prec: 98.9277, Prec_occ: 99.7637, Elapsed time: 114.1887s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 21:19:52 Train Epoch: 6 [102400/199302 (51%)]2145, SiaLoss: 0.007017, ClsLoss: [7.431550/6.715969/7.120182], Prec: 98.9834, Prec_occ: 99.7832, Elapsed time: 106.6451s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 21:21:40 Train Epoch: 6 [153600/199302 (77%)]2245, SiaLoss: 0.007011, ClsLoss: [7.398513/6.696119/7.064430], Prec: 99.0104, Prec_occ: 99.7910, Elapsed time: 108.4032s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 21:23:13 Train Summary : SiaLoss: 0.007010, ClsLoss: [7.369332/6.678427], Prec: 99.0199, Prec_occ: 99.7891, Elapsed time: 421.5178s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 21:26:16 Valid : [51200/253658 (20%)], SiaLoss: 0.006998, CleanLoss: 7.282714, OccLoss: 6.628221, Prec: 99.0664, Prec_occ: 99.8027, Elapsed time: 181.8041s(100 iters)
+2021-09-06 21:29:21 Valid : [102400/253658 (40%)], SiaLoss: 0.006993, CleanLoss: 7.288182, OccLoss: 6.629997, Prec: 99.0781, Prec_occ: 99.8076, Elapsed time: 185.5340s(100 iters)
+2021-09-06 21:32:40 Valid : [153600/253658 (60%)], SiaLoss: 0.006994, CleanLoss: 7.284773, OccLoss: 6.628135, Prec: 99.0944, Prec_occ: 99.8086, Elapsed time: 198.3035s(100 iters)
+2021-09-06 21:36:14 Valid : [204800/253658 (81%)], SiaLoss: 0.006992, CleanLoss: 7.282372, OccLoss: 6.625454, Prec: 99.1035, Prec_occ: 99.8042, Elapsed time: 214.1846s(100 iters)
+2021-09-06 21:39:56 Valid Summary : SiaLoss: 0.006992, CleanLoss: 7.283018, OccLoss: 6.627320, Prec: 99.0972, Prec_occ: 99.8013, Elapsed time: 1001.5474s
+2021-09-06 21:39:56 Epoch 7 start training
+2021-09-06 21:41:38 Train Epoch: 7 [51200/199302 (26%)]2434, SiaLoss: 0.006988, ClsLoss: [7.201443/6.573756/6.957482], Prec: 99.1738, Prec_occ: 99.8242, Elapsed time: 102.7265s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 21:43:18 Train Epoch: 7 [102400/199302 (51%)]2534, SiaLoss: 0.006988, ClsLoss: [7.175468/6.558275/6.916031], Prec: 99.2002, Prec_occ: 99.8193, Elapsed time: 99.2082s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 21:44:56 Train Epoch: 7 [153600/199302 (77%)]2634, SiaLoss: 0.006983, ClsLoss: [7.149682/6.539774/6.870166], Prec: 99.2064, Prec_occ: 99.8164, Elapsed time: 98.8204s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 21:46:25 Train Summary : SiaLoss: 0.006982, ClsLoss: [7.131464/6.525740], Prec: 99.1992, Prec_occ: 99.8117, Elapsed time: 389.3745s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 21:49:44 Valid : [51200/253658 (20%)], SiaLoss: 0.006950, CleanLoss: 7.074041, OccLoss: 6.518016, Prec: 99.2227, Prec_occ: 99.8359, Elapsed time: 197.7352s(100 iters)
+2021-09-06 21:53:05 Valid : [102400/253658 (40%)], SiaLoss: 0.006946, CleanLoss: 7.079465, OccLoss: 6.519402, Prec: 99.2412, Prec_occ: 99.8330, Elapsed time: 201.0592s(100 iters)
+2021-09-06 21:56:23 Valid : [153600/253658 (60%)], SiaLoss: 0.006947, CleanLoss: 7.075887, OccLoss: 6.517319, Prec: 99.2546, Prec_occ: 99.8307, Elapsed time: 198.1350s(100 iters)
+2021-09-06 21:59:42 Valid : [204800/253658 (81%)], SiaLoss: 0.006945, CleanLoss: 7.073613, OccLoss: 6.514579, Prec: 99.2603, Prec_occ: 99.8281, Elapsed time: 198.7579s(100 iters)
+2021-09-06 22:02:47 Valid Summary : SiaLoss: 0.006945, CleanLoss: 7.074508, OccLoss: 6.516559, Prec: 99.2514, Prec_occ: 99.8261, Elapsed time: 980.3802s
+2021-09-06 22:02:47 Epoch 8 start training
+2021-09-06 22:04:27 Train Epoch: 8 [51200/199302 (26%)]2823, SiaLoss: 0.006972, ClsLoss: [7.002377/6.441196/6.791507], Prec: 99.3086, Prec_occ: 99.8457, Elapsed time: 99.7928s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:06:07 Train Epoch: 8 [102400/199302 (51%)]2923, SiaLoss: 0.006967, ClsLoss: [6.986631/6.433224/6.767682], Prec: 99.3232, Prec_occ: 99.8496, Elapsed time: 99.8139s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:07:47 Train Epoch: 8 [153600/199302 (77%)]3023, SiaLoss: 0.006967, ClsLoss: [6.976140/6.427222/6.754857], Prec: 99.3151, Prec_occ: 99.8366, Elapsed time: 100.7891s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:09:16 Train Summary : SiaLoss: 0.006966, ClsLoss: [6.965421/6.418258], Prec: 99.3131, Prec_occ: 99.8333, Elapsed time: 389.3110s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 22:12:18 Valid : [51200/253658 (20%)], SiaLoss: 0.006918, CleanLoss: 6.947811, OccLoss: 6.401720, Prec: 99.2773, Prec_occ: 99.8516, Elapsed time: 180.5008s(100 iters)
+2021-09-06 22:15:00 Valid : [102400/253658 (40%)], SiaLoss: 0.006914, CleanLoss: 6.952657, OccLoss: 6.403289, Prec: 99.2939, Prec_occ: 99.8477, Elapsed time: 161.6979s(100 iters)
+2021-09-06 22:17:19 Valid : [153600/253658 (60%)], SiaLoss: 0.006915, CleanLoss: 6.948786, OccLoss: 6.400938, Prec: 99.3164, Prec_occ: 99.8411, Elapsed time: 138.6202s(100 iters)
+2021-09-06 22:19:15 Valid : [204800/253658 (81%)], SiaLoss: 0.006913, CleanLoss: 6.946982, OccLoss: 6.398246, Prec: 99.3213, Prec_occ: 99.8403, Elapsed time: 116.6051s(100 iters)
+2021-09-06 22:20:46 Valid Summary : SiaLoss: 0.006913, CleanLoss: 6.948178, OccLoss: 6.400356, Prec: 99.3144, Prec_occ: 99.8388, Elapsed time: 687.8333s
+2021-09-06 22:20:46 Epoch 9 start training
+2021-09-06 22:22:28 Train Epoch: 9 [51200/199302 (26%)]3212, SiaLoss: 0.006969, ClsLoss: [6.857445/6.350524/6.673670], Prec: 99.3730, Prec_occ: 99.8457, Elapsed time: 102.2226s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:24:08 Train Epoch: 9 [102400/199302 (51%)]3312, SiaLoss: 0.006969, ClsLoss: [6.852074/6.346565/6.664347], Prec: 99.3809, Prec_occ: 99.8525, Elapsed time: 100.0969s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:25:48 Train Epoch: 9 [153600/199302 (77%)]3412, SiaLoss: 0.006968, ClsLoss: [6.848235/6.344688/6.660400], Prec: 99.3730, Prec_occ: 99.8464, Elapsed time: 99.8558s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:27:17 Train Summary : SiaLoss: 0.006964, ClsLoss: [6.839678/6.338378], Prec: 99.3859, Prec_occ: 99.8439, Elapsed time: 391.1315s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 22:28:44 Valid : [51200/253658 (20%)], SiaLoss: 0.006999, CleanLoss: 6.831906, OccLoss: 6.343723, Prec: 99.3379, Prec_occ: 99.8574, Elapsed time: 86.1737s(100 iters)
+2021-09-06 22:30:14 Valid : [102400/253658 (40%)], SiaLoss: 0.006995, CleanLoss: 6.837623, OccLoss: 6.345009, Prec: 99.3438, Prec_occ: 99.8535, Elapsed time: 89.0601s(100 iters)
+2021-09-06 22:31:36 Valid : [153600/253658 (60%)], SiaLoss: 0.006996, CleanLoss: 6.833770, OccLoss: 6.342814, Prec: 99.3607, Prec_occ: 99.8457, Elapsed time: 82.4673s(100 iters)
+2021-09-06 22:33:00 Valid : [204800/253658 (81%)], SiaLoss: 0.006994, CleanLoss: 6.831989, OccLoss: 6.340037, Prec: 99.3628, Prec_occ: 99.8442, Elapsed time: 84.2019s(100 iters)
+2021-09-06 22:34:20 Valid Summary : SiaLoss: 0.006994, CleanLoss: 6.833052, OccLoss: 6.342183, Prec: 99.3515, Prec_occ: 99.8399, Elapsed time: 421.3096s
+2021-09-06 22:34:20 Epoch 10 start training
+2021-09-06 22:36:00 Train Epoch: 10 [51200/199302 (26%)]3601, SiaLoss: 0.006964, ClsLoss: [6.738294/6.268627/6.573105], Prec: 99.4219, Prec_occ: 99.8496, Elapsed time: 99.9715s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:37:37 Train Epoch: 10 [102400/199302 (51%)]3701, SiaLoss: 0.006959, ClsLoss: [6.746357/6.272269/6.584710], Prec: 99.4248, Prec_occ: 99.8535, Elapsed time: 97.2772s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:39:16 Train Epoch: 10 [153600/199302 (77%)]3801, SiaLoss: 0.006956, ClsLoss: [6.739145/6.271313/6.566537], Prec: 99.4297, Prec_occ: 99.8470, Elapsed time: 99.0144s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:40:43 Train Summary : SiaLoss: 0.006954, ClsLoss: [6.735368/6.271471], Prec: 99.4382, Prec_occ: 99.8539, Elapsed time: 383.3184s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 22:42:10 Valid : [51200/253658 (20%)], SiaLoss: 0.006977, CleanLoss: 6.755707, OccLoss: 6.294588, Prec: 99.3555, Prec_occ: 99.8516, Elapsed time: 85.6002s(100 iters)
+2021-09-06 22:43:33 Valid : [102400/253658 (40%)], SiaLoss: 0.006973, CleanLoss: 6.760500, OccLoss: 6.295792, Prec: 99.3789, Prec_occ: 99.8525, Elapsed time: 82.9293s(100 iters)
+2021-09-06 22:44:54 Valid : [153600/253658 (60%)], SiaLoss: 0.006974, CleanLoss: 6.756765, OccLoss: 6.293656, Prec: 99.4043, Prec_occ: 99.8464, Elapsed time: 81.0174s(100 iters)
+2021-09-06 22:46:17 Valid : [204800/253658 (81%)], SiaLoss: 0.006972, CleanLoss: 6.754995, OccLoss: 6.290925, Prec: 99.4043, Prec_occ: 99.8418, Elapsed time: 83.0718s(100 iters)
+2021-09-06 22:47:34 Valid Summary : SiaLoss: 0.006972, CleanLoss: 6.756218, OccLoss: 6.293017, Prec: 99.3921, Prec_occ: 99.8407, Elapsed time: 409.4592s
+2021-09-06 22:47:34 Epoch 11 start training
+2021-09-06 22:49:14 Train Epoch: 11 [51200/199302 (26%)]3990, SiaLoss: 0.006950, ClsLoss: [6.671883/6.236426/6.523655], Prec: 99.4961, Prec_occ: 99.8672, Elapsed time: 100.4891s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:50:53 Train Epoch: 11 [102400/199302 (51%)]4090, SiaLoss: 0.006944, ClsLoss: [6.663636/6.231194/6.510063], Prec: 99.4746, Prec_occ: 99.8750, Elapsed time: 99.0477s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:52:32 Train Epoch: 11 [153600/199302 (77%)]4190, SiaLoss: 0.006943, ClsLoss: [6.658531/6.226449/6.502047], Prec: 99.4785, Prec_occ: 99.8678, Elapsed time: 98.6244s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 22:53:59 Train Summary : SiaLoss: 0.006943, ClsLoss: [6.657809/6.227202], Prec: 99.4713, Prec_occ: 99.8639, Elapsed time: 385.4057s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 22:55:29 Valid : [51200/253658 (20%)], SiaLoss: 0.006820, CleanLoss: 6.690671, OccLoss: 6.282930, Prec: 99.4648, Prec_occ: 99.8672, Elapsed time: 87.5814s(100 iters)
+2021-09-06 22:56:52 Valid : [102400/253658 (40%)], SiaLoss: 0.006816, CleanLoss: 6.696284, OccLoss: 6.284056, Prec: 99.4688, Prec_occ: 99.8691, Elapsed time: 83.3572s(100 iters)
+2021-09-06 22:58:18 Valid : [153600/253658 (60%)], SiaLoss: 0.006817, CleanLoss: 6.692531, OccLoss: 6.281829, Prec: 99.4883, Prec_occ: 99.8659, Elapsed time: 86.1670s(100 iters)
+2021-09-06 22:59:41 Valid : [204800/253658 (81%)], SiaLoss: 0.006816, CleanLoss: 6.690948, OccLoss: 6.279070, Prec: 99.4912, Prec_occ: 99.8628, Elapsed time: 82.6359s(100 iters)
+2021-09-06 23:01:00 Valid Summary : SiaLoss: 0.006816, CleanLoss: 6.692408, OccLoss: 6.281223, Prec: 99.4836, Prec_occ: 99.8597, Elapsed time: 419.2867s
+2021-09-06 23:01:00 Epoch 12 start training
+2021-09-06 23:02:43 Train Epoch: 12 [51200/199302 (26%)]4379, SiaLoss: 0.006942, ClsLoss: [6.586268/6.177023/6.451065], Prec: 99.5117, Prec_occ: 99.8809, Elapsed time: 102.4992s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:04:22 Train Epoch: 12 [102400/199302 (51%)]4479, SiaLoss: 0.006939, ClsLoss: [6.592774/6.185038/6.465523], Prec: 99.5029, Prec_occ: 99.8770, Elapsed time: 99.6047s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:06:02 Train Epoch: 12 [153600/199302 (77%)]4579, SiaLoss: 0.006938, ClsLoss: [6.593096/6.186910/6.461561], Prec: 99.4980, Prec_occ: 99.8659, Elapsed time: 99.1501s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:07:46 Train Summary : SiaLoss: 0.006939, ClsLoss: [6.590188/6.185791], Prec: 99.5004, Prec_occ: 99.8669, Elapsed time: 405.5619s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 23:09:13 Valid : [51200/253658 (20%)], SiaLoss: 0.006934, CleanLoss: 6.612898, OccLoss: 6.223017, Prec: 99.4824, Prec_occ: 99.8730, Elapsed time: 85.7414s(100 iters)
+2021-09-06 23:10:40 Valid : [102400/253658 (40%)], SiaLoss: 0.006930, CleanLoss: 6.618625, OccLoss: 6.224582, Prec: 99.4824, Prec_occ: 99.8662, Elapsed time: 86.7992s(100 iters)
+2021-09-06 23:12:02 Valid : [153600/253658 (60%)], SiaLoss: 0.006931, CleanLoss: 6.614202, OccLoss: 6.222036, Prec: 99.4987, Prec_occ: 99.8613, Elapsed time: 81.5834s(100 iters)
+2021-09-06 23:13:25 Valid : [204800/253658 (81%)], SiaLoss: 0.006929, CleanLoss: 6.612422, OccLoss: 6.219324, Prec: 99.5015, Prec_occ: 99.8599, Elapsed time: 83.4065s(100 iters)
+2021-09-06 23:14:49 Valid Summary : SiaLoss: 0.006929, CleanLoss: 6.613800, OccLoss: 6.221439, Prec: 99.4942, Prec_occ: 99.8585, Elapsed time: 421.0931s
+2021-09-06 23:14:49 Epoch 13 start training
+2021-09-06 23:16:39 Train Epoch: 13 [51200/199302 (26%)]4768, SiaLoss: 0.006943, ClsLoss: [6.520441/6.140314/6.399810], Prec: 99.5078, Prec_occ: 99.8789, Elapsed time: 110.3188s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:18:24 Train Epoch: 13 [102400/199302 (51%)]4868, SiaLoss: 0.006936, ClsLoss: [6.526491/6.147035/6.412441], Prec: 99.5342, Prec_occ: 99.8818, Elapsed time: 105.2588s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:20:08 Train Epoch: 13 [153600/199302 (77%)]4968, SiaLoss: 0.006938, ClsLoss: [6.528818/6.149738/6.413721], Prec: 99.5319, Prec_occ: 99.8783, Elapsed time: 104.0957s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:21:32 Train Summary : SiaLoss: 0.006936, ClsLoss: [6.527649/6.149866], Prec: 99.5275, Prec_occ: 99.8740, Elapsed time: 403.5927s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 23:23:02 Valid : [51200/253658 (20%)], SiaLoss: 0.006892, CleanLoss: 6.559399, OccLoss: 6.193618, Prec: 99.5078, Prec_occ: 99.8848, Elapsed time: 88.1601s(100 iters)
+2021-09-06 23:24:27 Valid : [102400/253658 (40%)], SiaLoss: 0.006888, CleanLoss: 6.565070, OccLoss: 6.195060, Prec: 99.5186, Prec_occ: 99.8848, Elapsed time: 84.9774s(100 iters)
+2021-09-06 23:25:52 Valid : [153600/253658 (60%)], SiaLoss: 0.006889, CleanLoss: 6.560882, OccLoss: 6.192486, Prec: 99.5345, Prec_occ: 99.8802, Elapsed time: 84.7323s(100 iters)
+2021-09-06 23:27:17 Valid : [204800/253658 (81%)], SiaLoss: 0.006887, CleanLoss: 6.559357, OccLoss: 6.189754, Prec: 99.5327, Prec_occ: 99.8765, Elapsed time: 85.7712s(100 iters)
+2021-09-06 23:28:38 Valid Summary : SiaLoss: 0.006887, CleanLoss: 6.560726, OccLoss: 6.191931, Prec: 99.5238, Prec_occ: 99.8738, Elapsed time: 424.0465s
+2021-09-06 23:28:38 Epoch 14 start training
+2021-09-06 23:30:18 Train Epoch: 14 [51200/199302 (26%)]5157, SiaLoss: 0.006947, ClsLoss: [6.469231/6.117269/6.362718], Prec: 99.5488, Prec_occ: 99.8809, Elapsed time: 100.0996s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:31:54 Train Epoch: 14 [102400/199302 (51%)]5257, SiaLoss: 0.006940, ClsLoss: [6.467542/6.117489/6.361113], Prec: 99.5508, Prec_occ: 99.8789, Elapsed time: 96.1438s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:33:28 Train Epoch: 14 [153600/199302 (77%)]5357, SiaLoss: 0.006939, ClsLoss: [6.473222/6.119420/6.373310], Prec: 99.5579, Prec_occ: 99.8750, Elapsed time: 93.7775s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:34:52 Train Summary : SiaLoss: 0.006938, ClsLoss: [6.477036/6.120733], Prec: 99.5481, Prec_occ: 99.8725, Elapsed time: 374.5854s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 23:36:22 Valid : [51200/253658 (20%)], SiaLoss: 0.007008, CleanLoss: 6.539843, OccLoss: 6.142921, Prec: 99.4824, Prec_occ: 99.8730, Elapsed time: 88.1585s(100 iters)
+2021-09-06 23:37:46 Valid : [102400/253658 (40%)], SiaLoss: 0.007004, CleanLoss: 6.545752, OccLoss: 6.144800, Prec: 99.4775, Prec_occ: 99.8652, Elapsed time: 84.3179s(100 iters)
+2021-09-06 23:39:14 Valid : [153600/253658 (60%)], SiaLoss: 0.007005, CleanLoss: 6.541903, OccLoss: 6.142309, Prec: 99.4896, Prec_occ: 99.8594, Elapsed time: 87.5856s(100 iters)
+2021-09-06 23:40:37 Valid : [204800/253658 (81%)], SiaLoss: 0.007003, CleanLoss: 6.540495, OccLoss: 6.139706, Prec: 99.4893, Prec_occ: 99.8594, Elapsed time: 82.9031s(100 iters)
+2021-09-06 23:41:56 Valid Summary : SiaLoss: 0.007003, CleanLoss: 6.541870, OccLoss: 6.141938, Prec: 99.4792, Prec_occ: 99.8561, Elapsed time: 421.8721s
+2021-09-06 23:41:56 Epoch 15 start training
+2021-09-06 23:43:37 Train Epoch: 15 [51200/199302 (26%)]5546, SiaLoss: 0.006954, ClsLoss: [6.430556/6.088843/6.329244], Prec: 99.5742, Prec_occ: 99.8770, Elapsed time: 100.8843s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:45:14 Train Epoch: 15 [102400/199302 (51%)]5646, SiaLoss: 0.006954, ClsLoss: [6.428078/6.084158/6.322067], Prec: 99.5615, Prec_occ: 99.8721, Elapsed time: 97.7798s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:46:52 Train Epoch: 15 [153600/199302 (77%)]5746, SiaLoss: 0.006951, ClsLoss: [6.433353/6.089881/6.342075], Prec: 99.5658, Prec_occ: 99.8730, Elapsed time: 97.4793s, LR: 0.00000/0.10000(100 iters) INFO: [net2/10.0/]
+2021-09-06 23:48:18 Train Summary : SiaLoss: 0.006950, ClsLoss: [6.432529/6.088295], Prec: 99.5672, Prec_occ: 99.8775, Elapsed time: 382.4080s, INFO: [net2/10.0]
+Validating on valid set...
+2021-09-06 23:49:45 Valid : [51200/253658 (20%)], SiaLoss: 0.007046, CleanLoss: 6.505417, OccLoss: 6.098342, Prec: 99.4707, Prec_occ: 99.8691, Elapsed time: 85.1685s(100 iters)
+2021-09-06 23:51:08 Valid : [102400/253658 (40%)], SiaLoss: 0.007042, CleanLoss: 6.510799, OccLoss: 6.099885, Prec: 99.4688, Prec_occ: 99.8672, Elapsed time: 82.7258s(100 iters)
+2021-09-06 23:52:31 Valid : [153600/253658 (60%)], SiaLoss: 0.007043, CleanLoss: 6.506709, OccLoss: 6.097369, Prec: 99.4779, Prec_occ: 99.8574, Elapsed time: 83.3288s(100 iters)
+2021-09-06 23:53:55 Valid : [204800/253658 (81%)], SiaLoss: 0.007041, CleanLoss: 6.505135, OccLoss: 6.094600, Prec: 99.4775, Prec_occ: 99.8555, Elapsed time: 84.1594s(100 iters)
+2021-09-06 23:55:15 Valid Summary : SiaLoss: 0.007041, CleanLoss: 6.506455, OccLoss: 6.096890, Prec: 99.4694, Prec_occ: 99.8510, Elapsed time: 414.9355s
+2021-09-06 23:55:15 Epoch 16 start training

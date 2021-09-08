@@ -60,7 +60,7 @@ class LResNet(nn.Module):
             nn.BatchNorm1d(filter_list[4] * 7 * 6),
             nn.Dropout(p=0.4),
             nn.Linear(filter_list[4] * 7 * 6, 512),
-            nn.BatchNorm1d(512),  # fix gamma ???
+            nn.BatchNorm1d(512), 
         )
 
         # Weight initialization
@@ -84,14 +84,27 @@ class LResNet(nn.Module):
 
     def forward(self, x):
         x = self.conv1(x)
+        print("conv1:")
+        print(x)
         x = self.bn1(x)
+        print("bn1:")
+        print(x)
         x = self.prelu1(x)
+        print("prelu1:")
+        print(x)
 
         x = self.layer1(x)
+        print("layer1:")
+        print(x)
         x = self.layer2(x)
+        print("layer2:")
+        print(x)
         x = self.layer3(x)
+        print("layer3:")
+        print(x)
         x = self.layer4(x)
-
+        print("layer4:")
+        print(x)
         x = x.view(x.size(0), -1)
         x = self.fc(x)
 

@@ -21,7 +21,6 @@ cudnn.benchmark = True
 import _init_paths
 import net_sia
 import LResnet50
-#import datasets.dataset_pair as dset
 from dataset import ImageList
 import Layer
 import utils
@@ -102,8 +101,6 @@ def main():
     # --------------------------------------model----------------------------------------
     model = net_sia.LResNet50E_IR_Sia(is_gray=args.is_gray)
     model_eval = net_sia.LResNet50E_IR_Sia(is_gray=args.is_gray)
-#    model = LResnet50.LResNet50E_IR(is_gray = False)
-#    model_eval = LResnet50.LResNet50E_IR(is_gray = False)
     
     
     # 512 is dimension of feature

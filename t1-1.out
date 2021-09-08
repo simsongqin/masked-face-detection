@@ -1,0 +1,354 @@
+only one GPU found !!!
+DataParallel(
+  (module): LResNet(
+    (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (prelu1): PReLU(num_parameters=64)
+    (layer1): Sequential(
+      (0): BlockIR(
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=64)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BlockIR(
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=64)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): BlockIR(
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=64)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer2): Sequential(
+      (0): BlockIR(
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=128)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BlockIR(
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=128)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): BlockIR(
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=128)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): BlockIR(
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=128)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer3): Sequential(
+      (0): BlockIR(
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (5): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (6): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (7): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (8): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (9): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (10): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (11): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (12): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (13): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=256)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer4): Sequential(
+      (0): BlockIR(
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=512)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BlockIR(
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=512)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): BlockIR(
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (prelu1): PReLU(num_parameters=512)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (fc): Sequential(
+      (0): BatchNorm1d(21504, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (1): Dropout(p=0.4, inplace=False)
+      (2): Linear(in_features=21504, out_features=512, bias=True)
+      (3): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+)
+save checkpoint finished!
+length of train dataset: 452960
+Number of Classes: 10575
+2021-55-03 20:55:23Epoch 1 start training
+2021-02-03 21:02:05Train Epoch: 1 [51200/452960 (11%)]100, Loss: 19.902332, Elapsed time: 401.7555s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-07-03 21:07:13Train Epoch: 1 [102400/452960 (23%)]200, Loss: 18.149029, Elapsed time: 308.1641s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-11-03 21:11:54Train Epoch: 1 [153600/452960 (34%)]300, Loss: 16.729243, Elapsed time: 280.8815s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-16-03 21:16:22Train Epoch: 1 [204800/452960 (45%)]400, Loss: 15.588053, Elapsed time: 267.5098s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-20-03 21:20:43Train Epoch: 1 [256000/452960 (57%)]500, Loss: 14.589101, Elapsed time: 261.6224s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-24-03 21:24:57Train Epoch: 1 [307200/452960 (68%)]600, Loss: 13.740976, Elapsed time: 254.2833s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-29-03 21:29:07Train Epoch: 1 [358400/452960 (79%)]700, Loss: 12.937513, Elapsed time: 249.6697s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-33-03 21:33:14Train Epoch: 1 [409600/452960 (90%)]800, Loss: 12.199963, Elapsed time: 247.0558s(100 iters) Margin: 0.3500, Scale: 30.00
+Evaluation result after epoch 1:
+(10, 2)
+LFWACC=0.8088 std=0.0188 thd=0.2860
+2021-42-03 21:42:56Epoch 2 start training
+2021-45-03 21:45:01Train Epoch: 2 [51200/452960 (11%)]984, Loss: 10.449955, Elapsed time: 124.6153s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-46-03 21:46:51Train Epoch: 2 [102400/452960 (23%)]1084, Loss: 10.180116, Elapsed time: 110.6187s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-48-03 21:48:42Train Epoch: 2 [153600/452960 (34%)]1184, Loss: 9.850287, Elapsed time: 110.3699s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-50-03 21:50:32Train Epoch: 2 [204800/452960 (45%)]1284, Loss: 9.521417, Elapsed time: 110.3737s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-52-03 21:52:23Train Epoch: 2 [256000/452960 (57%)]1384, Loss: 9.166953, Elapsed time: 110.3745s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-54-03 21:54:13Train Epoch: 2 [307200/452960 (68%)]1484, Loss: 8.884145, Elapsed time: 110.4034s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-56-03 21:56:03Train Epoch: 2 [358400/452960 (79%)]1584, Loss: 8.569411, Elapsed time: 110.3754s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-57-03 21:57:54Train Epoch: 2 [409600/452960 (90%)]1684, Loss: 8.295103, Elapsed time: 110.4303s(100 iters) Margin: 0.3500, Scale: 30.00
+Evaluation result after epoch 2:
+(10, 2)
+LFWACC=0.8690 std=0.0126 thd=0.2850
+2021-02-03 22:02:46Epoch 3 start training
+2021-04-03 22:04:46Train Epoch: 3 [51200/452960 (11%)]1868, Loss: 7.216727, Elapsed time: 119.9283s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-06-03 22:06:37Train Epoch: 3 [102400/452960 (23%)]1968, Loss: 7.291892, Elapsed time: 110.4827s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-08-03 22:08:27Train Epoch: 3 [153600/452960 (34%)]2068, Loss: 7.197033, Elapsed time: 110.3847s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-10-03 22:10:17Train Epoch: 3 [204800/452960 (45%)]2168, Loss: 7.111650, Elapsed time: 110.3229s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-12-03 22:12:08Train Epoch: 3 [256000/452960 (57%)]2268, Loss: 6.962912, Elapsed time: 110.4187s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-13-03 22:13:58Train Epoch: 3 [307200/452960 (68%)]2368, Loss: 6.896663, Elapsed time: 110.3757s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-15-03 22:15:49Train Epoch: 3 [358400/452960 (79%)]2468, Loss: 6.796257, Elapsed time: 110.3471s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-17-03 22:17:39Train Epoch: 3 [409600/452960 (90%)]2568, Loss: 6.626545, Elapsed time: 110.3847s(100 iters) Margin: 0.3500, Scale: 30.00
+Evaluation result after epoch 3:
+(10, 2)
+LFWACC=0.8902 std=0.0130 thd=0.3090
+2021-22-03 22:22:29Epoch 4 start training
+2021-24-03 22:24:34Train Epoch: 4 [51200/452960 (11%)]2752, Loss: 5.884430, Elapsed time: 124.3683s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-26-03 22:26:24Train Epoch: 4 [102400/452960 (23%)]2852, Loss: 6.033780, Elapsed time: 110.5093s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-28-03 22:28:14Train Epoch: 4 [153600/452960 (34%)]2952, Loss: 6.067922, Elapsed time: 110.3676s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-30-03 22:30:05Train Epoch: 4 [204800/452960 (45%)]3052, Loss: 6.055948, Elapsed time: 110.4075s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-31-03 22:31:55Train Epoch: 4 [256000/452960 (57%)]3152, Loss: 6.013199, Elapsed time: 110.3875s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-33-03 22:33:46Train Epoch: 4 [307200/452960 (68%)]3252, Loss: 5.993355, Elapsed time: 110.3937s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-35-03 22:35:36Train Epoch: 4 [358400/452960 (79%)]3352, Loss: 5.948769, Elapsed time: 110.3732s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-37-03 22:37:26Train Epoch: 4 [409600/452960 (90%)]3452, Loss: 5.900413, Elapsed time: 110.3722s(100 iters) Margin: 0.3500, Scale: 30.00
+Evaluation result after epoch 4:
+(10, 2)
+LFWACC=0.8942 std=0.0132 thd=0.3050
+2021-42-03 22:42:19Epoch 5 start training
+2021-44-03 22:44:19Train Epoch: 5 [51200/452960 (11%)]3636, Loss: 5.230201, Elapsed time: 120.5537s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-46-03 22:46:10Train Epoch: 5 [102400/452960 (23%)]3736, Loss: 5.396105, Elapsed time: 110.4832s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-48-03 22:48:00Train Epoch: 5 [153600/452960 (34%)]3836, Loss: 5.502751, Elapsed time: 110.3384s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-49-03 22:49:51Train Epoch: 5 [204800/452960 (45%)]3936, Loss: 5.542666, Elapsed time: 110.3585s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-51-03 22:51:41Train Epoch: 5 [256000/452960 (57%)]4036, Loss: 5.546717, Elapsed time: 110.3574s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-53-03 22:53:31Train Epoch: 5 [307200/452960 (68%)]4136, Loss: 5.572589, Elapsed time: 110.3847s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-55-03 22:55:22Train Epoch: 5 [358400/452960 (79%)]4236, Loss: 5.491430, Elapsed time: 110.3789s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-57-03 22:57:12Train Epoch: 5 [409600/452960 (90%)]4336, Loss: 5.464121, Elapsed time: 110.3619s(100 iters) Margin: 0.3500, Scale: 30.00
+Evaluation result after epoch 5:
+(10, 2)
+LFWACC=0.8938 std=0.0155 thd=0.3050
+2021-02-03 23:02:03Epoch 6 start training
+2021-04-03 23:04:05Train Epoch: 6 [51200/452960 (11%)]4520, Loss: 4.787762, Elapsed time: 122.0127s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-05-03 23:05:55Train Epoch: 6 [102400/452960 (23%)]4620, Loss: 5.097094, Elapsed time: 110.8120s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-07-03 23:07:46Train Epoch: 6 [153600/452960 (34%)]4720, Loss: 5.144298, Elapsed time: 110.4020s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-09-03 23:09:36Train Epoch: 6 [204800/452960 (45%)]4820, Loss: 5.258906, Elapsed time: 110.3870s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-11-03 23:11:27Train Epoch: 6 [256000/452960 (57%)]4920, Loss: 5.215805, Elapsed time: 110.3759s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-13-03 23:13:17Train Epoch: 6 [307200/452960 (68%)]5020, Loss: 5.209278, Elapsed time: 110.3875s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-15-03 23:15:07Train Epoch: 6 [358400/452960 (79%)]5120, Loss: 5.246196, Elapsed time: 110.3868s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-16-03 23:16:58Train Epoch: 6 [409600/452960 (90%)]5220, Loss: 5.235094, Elapsed time: 110.3661s(100 iters) Margin: 0.3500, Scale: 30.00
+Evaluation result after epoch 6:
+(10, 2)
+LFWACC=0.8988 std=0.0124 thd=0.3100
+2021-21-03 23:21:50Epoch 7 start training
+2021-23-03 23:23:52Train Epoch: 7 [51200/452960 (11%)]5404, Loss: 4.615751, Elapsed time: 121.1591s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-25-03 23:25:42Train Epoch: 7 [102400/452960 (23%)]5504, Loss: 4.800944, Elapsed time: 110.6004s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-27-03 23:27:32Train Epoch: 7 [153600/452960 (34%)]5604, Loss: 4.927277, Elapsed time: 110.3642s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-29-03 23:29:23Train Epoch: 7 [204800/452960 (45%)]5704, Loss: 4.944780, Elapsed time: 110.3432s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-31-03 23:31:13Train Epoch: 7 [256000/452960 (57%)]5804, Loss: 5.008372, Elapsed time: 110.3365s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-33-03 23:33:04Train Epoch: 7 [307200/452960 (68%)]5904, Loss: 5.043346, Elapsed time: 110.3528s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-34-03 23:34:54Train Epoch: 7 [358400/452960 (79%)]6004, Loss: 5.012785, Elapsed time: 110.3463s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-36-03 23:36:44Train Epoch: 7 [409600/452960 (90%)]6104, Loss: 5.039759, Elapsed time: 110.3701s(100 iters) Margin: 0.3500, Scale: 30.00
+Evaluation result after epoch 7:
+(10, 2)
+LFWACC=0.9003 std=0.0108 thd=0.2955
+2021-41-03 23:41:36Epoch 8 start training
+2021-43-03 23:43:37Train Epoch: 8 [51200/452960 (11%)]6288, Loss: 4.436766, Elapsed time: 120.3190s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-45-03 23:45:27Train Epoch: 8 [102400/452960 (23%)]6388, Loss: 4.653061, Elapsed time: 110.5449s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-47-03 23:47:18Train Epoch: 8 [153600/452960 (34%)]6488, Loss: 4.728260, Elapsed time: 110.3656s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-49-03 23:49:08Train Epoch: 8 [204800/452960 (45%)]6588, Loss: 4.862515, Elapsed time: 110.3172s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-50-03 23:50:58Train Epoch: 8 [256000/452960 (57%)]6688, Loss: 4.837034, Elapsed time: 110.3466s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-52-03 23:52:49Train Epoch: 8 [307200/452960 (68%)]6788, Loss: 4.842376, Elapsed time: 110.3837s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-54-03 23:54:39Train Epoch: 8 [358400/452960 (79%)]6888, Loss: 4.862342, Elapsed time: 110.3778s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-56-03 23:56:29Train Epoch: 8 [409600/452960 (90%)]6988, Loss: 4.852948, Elapsed time: 110.3535s(100 iters) Margin: 0.3500, Scale: 30.00
+Evaluation result after epoch 8:
+(10, 2)
+LFWACC=0.8923 std=0.0124 thd=0.2995
+2021-01-04 00:01:20Epoch 9 start training
+2021-03-04 00:03:23Train Epoch: 9 [51200/452960 (11%)]7172, Loss: 4.239183, Elapsed time: 123.4488s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-05-04 00:05:14Train Epoch: 9 [102400/452960 (23%)]7272, Loss: 4.491460, Elapsed time: 110.6525s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-07-04 00:07:04Train Epoch: 9 [153600/452960 (34%)]7372, Loss: 4.577345, Elapsed time: 110.3982s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-08-04 00:08:55Train Epoch: 9 [204800/452960 (45%)]7472, Loss: 4.644452, Elapsed time: 110.3469s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-10-04 00:10:45Train Epoch: 9 [256000/452960 (57%)]7572, Loss: 4.720619, Elapsed time: 110.3422s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-12-04 00:12:35Train Epoch: 9 [307200/452960 (68%)]7672, Loss: 4.720028, Elapsed time: 110.3610s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-14-04 00:14:26Train Epoch: 9 [358400/452960 (79%)]7772, Loss: 4.770342, Elapsed time: 110.3626s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-16-04 00:16:16Train Epoch: 9 [409600/452960 (90%)]7872, Loss: 4.761963, Elapsed time: 110.3346s(100 iters) Margin: 0.3500, Scale: 30.00
+Evaluation result after epoch 9:
+(10, 2)
+LFWACC=0.8990 std=0.0138 thd=0.3180
+2021-21-04 00:21:09Epoch 10 start training
+2021-23-04 00:23:13Train Epoch: 10 [51200/452960 (11%)]8056, Loss: 4.103312, Elapsed time: 124.3545s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-25-04 00:25:04Train Epoch: 10 [102400/452960 (23%)]8156, Loss: 4.308078, Elapsed time: 110.7303s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-26-04 00:26:55Train Epoch: 10 [153600/452960 (34%)]8256, Loss: 4.496534, Elapsed time: 110.3937s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-28-04 00:28:45Train Epoch: 10 [204800/452960 (45%)]8356, Loss: 4.581730, Elapsed time: 110.3719s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-30-04 00:30:35Train Epoch: 10 [256000/452960 (57%)]8456, Loss: 4.581537, Elapsed time: 110.3572s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-32-04 00:32:26Train Epoch: 10 [307200/452960 (68%)]8556, Loss: 4.585954, Elapsed time: 110.3493s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-34-04 00:34:16Train Epoch: 10 [358400/452960 (79%)]8656, Loss: 4.681084, Elapsed time: 110.3570s(100 iters) Margin: 0.3500, Scale: 30.00
+2021-36-04 00:36:06Train Epoch: 10 [409600/452960 (90%)]8756, Loss: 4.628273, Elapsed time: 110.3545s(100 iters) Margin: 0.3500, Scale: 30.00
+Evaluation result after epoch 10:
+(10, 2)
+LFWACC=0.9057 std=0.0104 thd=0.2995
+2021-41-04 00:41:00Epoch 11 start training

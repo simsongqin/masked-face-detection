@@ -44,17 +44,18 @@ Contact:
 # training parameter
 parser = argparse.ArgumentParser('Pure implementation of CosFace by Pytorch')
 parser.add_argument('--root-path', type=str, default= DATASET_ROOT , help='the training set root path')
-parser.add_argument('--image-list', type=str, default='Casia_Webface_112x112_train_list.txt', help='the file and its path of image list')
-parser.add_argument('--batch-size', type=int, default=512)
+#parser.add_argument('--image-list', type=str, default='Casia_Webface_112x112_train_list.txt', help='the file and its path of image list')
+parser.add_argument('--image-list', type=str, default='Untitled 2.txt')
+parser.add_argument('--batch-size', type=int, default=1)
 parser.add_argument('--num-class', type=int, default=10575, help='number of people(class)')
-parser.add_argument('--epochs', type=int, default=50)
+parser.add_argument('--epochs', type=int, default=31)
 parser.add_argument('--lr', type=float, default=0.01)
 parser.add_argument('--momentum', type=float, default=0.9)
 parser.add_argument('--weight-decay', type=float, default=5e-4)
 parser.add_argument('--log-interval', type=float, default=100)
 parser.add_argument('--step-size', type=int, default=[100006000])
 #parser.add_argument('--step-size', type=int, default=[55000, 70775, 99085])
-parser.add_argument('--save-path', type=str, default='chkpt_1')
+parser.add_argument('--save-path', type=str, default='ash')
 parser.add_argument('--no-cuda', type=bool, default=False)
 parser.add_argument('--workers', type=int, default=4)
 parser.add_argument('--gpus', type=str, default='0,1,2,3,4,5,6,7')
@@ -141,7 +142,7 @@ def main():
     if not os.path.exists(args.save_path):
         os.makedirs(args.save_path)
     # model.save(args.save_path + '/CosFace_0_checkpoint.pth')
-cd 
+ 
     print('save checkpoint finished!')
 
     # upload training dataset
@@ -186,19 +187,19 @@ cd
         weight_decay=args.weight_decay
     )
     if resume:
-        print ("resume from epoch 22!!")
-        pretrained_cnn = torch.load('./chkpt_1/CosFace_21_checkpoint.pth')
-        pretrained_mcp = torch.load('./chkpt_1/MCP_21_checkpoint.pth') 
+        print ("resume from epoch 30!!")
+        pretrained_cnn = torch.load('./chkpt_1/CosFace_30_checkpoint.pth')
+        pretrained_mcp = torch.load('./chkpt_1/MCP_30_checkpoint.pth') 
         model.load_state_dict(pretrained_cnn)
         MCP.load_state_dict(pretrained_mcp)
 
-    for epoch in range(22, args.epochs + 1):
+    for epoch in range(31, args.epochs + 1):
         train(train_loader, model, MCP, criterion, optimizer, epoch)
         if (epoch % 1 == 0):
             torch.save(model.state_dict(), os.path.join(args.save_path, 'CosFace_' + str(epoch) + '_checkpoint.pth'))
             torch.save(MCP.state_dict(), os.path.join(args.save_path, 'MCP_' + str(epoch) + '_checkpoint.pth'))
         print("Evaluation result after epoch "+str(epoch)+":")
-        nfold_eval.eval(args.save_path+'/'+'CosFace_' + str(epoch) + '_checkpoint.pth')
+        #nfold_eval.eval(args.save_path+'/'+'CosFace_' + str(epoch) + '_checkpoint.pth')
         #lfw_eval.eval(LResnet50.LResNet50E_IR(is_gray=False), model_path=args.save_path+'/'+'CosFace_' + str(epoch) + '_checkpoint.pth')
     print('Finished Training')
 
